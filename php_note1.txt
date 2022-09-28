@@ -1,0 +1,19 @@
+局部变量：仅作用于函数内部
+  function example()
+  {
+  	$x = 1;
+  	global $y;
+  	}
+  echo $x;
+全局变量：作用于整个PHP文件
+默认不能作用于函数内部
+若要在函数内部使用全局函数，需用global来声明
+静态变量：一般变量会在函数运行结束后直接释放，静态变量在函数运行玩一次后不会释放
+  function example2()
+  {
+	  static $a = 0;
+	  $a += 1;
+	  echo $a;
+	  }
+  for  ($i = 0;$i < 10;$i++) example2();
+
